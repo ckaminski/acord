@@ -173,3 +173,15 @@ div.au-stagger {
     opacity: 1;
   }
 }
+
+
+.login-form {
+  width: 20vw;
+  margin: 20vh auto;
+}
+
+.login-form .panel-body > * {
+  display: block;
+  margin: 12px auto;
+}
+
