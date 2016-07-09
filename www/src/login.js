@@ -1,17 +1,20 @@
-import {inject, Aurelia} from 'aurelia-framework'
+import {Parent, inject, Aurelia} from 'aurelia-framework'
+import {Router} from 'aurelia-router'
 import {HttpClient} from 'aurelia-http-client'
 
-@inject(Aurelia, HttpClient)
+@inject(Aurelia, HttpClient, Parent.of(Router))
 export class Login {
     message = 'Welcome to Aurelia!'
 
-    constructor(Aurelia, HttpClient) { 
+    constructor(Aurelia, HttpClient, Router) { 
         this.app = Aurelia 
         this.http = HttpClient 
+        this.router = Router
     } 
 
     login() { 
-        // Test login here. 
+        //this.router.navigateToRoute('main')  
+        this.router.navigate('#/main')
     }
 
 }
